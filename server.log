@@ -1,0 +1,29 @@
+nohup: ignoring input
+2022-07-06 16:13:32.303852: I tensorflow_serving/model_servers/server.cc:89] Building single TensorFlow model file config:  model_name: fashion_model model_base_path: /tmp/
+2022-07-06 16:13:32.303981: I tensorflow_serving/model_servers/server_core.cc:465] Adding/updating models.
+2022-07-06 16:13:32.303991: I tensorflow_serving/model_servers/server_core.cc:594]  (Re-)adding model: fashion_model
+2022-07-06 16:13:32.404755: I tensorflow_serving/core/basic_manager.cc:740] Successfully reserved resources to load servable {name: fashion_model version: 1}
+2022-07-06 16:13:32.404849: I tensorflow_serving/core/loader_harness.cc:66] Approving load for servable version {name: fashion_model version: 1}
+2022-07-06 16:13:32.404887: I tensorflow_serving/core/loader_harness.cc:74] Loading servable version {name: fashion_model version: 1}
+2022-07-06 16:13:32.404983: I external/org_tensorflow/tensorflow/cc/saved_model/reader.cc:43] Reading SavedModel from: /tmp/1
+2022-07-06 16:13:32.410089: I external/org_tensorflow/tensorflow/cc/saved_model/reader.cc:81] Reading meta graph with tags { serve }
+2022-07-06 16:13:32.410159: I external/org_tensorflow/tensorflow/cc/saved_model/reader.cc:122] Reading SavedModel debug info (if present) from: /tmp/1
+2022-07-06 16:13:32.410270: I external/org_tensorflow/tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-07-06 16:13:32.427984: I external/org_tensorflow/tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:354] MLIR V1 optimization pass is not enabled
+2022-07-06 16:13:32.428505: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:228] Restoring SavedModel bundle.
+2022-07-06 16:13:32.469901: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:212] Running initialization op on SavedModel bundle at path: /tmp/1
+2022-07-06 16:13:32.525794: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:301] SavedModel load for tags { serve }; Status: success: OK. Took 120811 microseconds.
+2022-07-06 16:13:32.526263: I tensorflow_serving/servables/tensorflow/saved_model_warmup_util.cc:59] No warmup data file found at /tmp/1/assets.extra/tf_serving_warmup_requests
+2022-07-06 16:13:32.526618: I tensorflow_serving/core/loader_harness.cc:95] Successfully loaded servable version {name: fashion_model version: 1}
+2022-07-06 16:13:32.529125: I tensorflow_serving/model_servers/server_core.cc:486] Finished adding/updating models
+2022-07-06 16:13:32.529167: I tensorflow_serving/model_servers/server.cc:133] Using InsecureServerCredentials
+2022-07-06 16:13:32.529209: I tensorflow_serving/model_servers/server.cc:395] Profiler service is enabled
+E0706 16:13:32.529691807  637783 server_chttp2.cc:40]        {"created":"@1657116812.529631112","description":"No address added out of total 1 resolved","file":"external/com_github_grpc_grpc/src/core/ext/transport/chttp2/server/chttp2_server.cc","file_line":395,"referenced_errors":[{"created":"@1657116812.529629501","description":"Failed to add any wildcard listeners","file":"external/com_github_grpc_grpc/src/core/lib/iomgr/tcp_server_posix.cc","file_line":341,"referenced_errors":[{"created":"@1657116812.529616308","description":"Unable to configure socket","fd":5,"file":"external/com_github_grpc_grpc/src/core/lib/iomgr/tcp_server_utils_posix_common.cc","file_line":215,"referenced_errors":[{"created":"@1657116812.529613545","description":"Address already in use","errno":98,"file":"external/com_github_grpc_grpc/src/core/lib/iomgr/tcp_server_utils_posix_common.cc","file_line":189,"os_error":"Address already in use","syscall":"bind"}]},{"created":"@1657116812.529629192","description":"Unable to configure socket","fd":5,"file":"external/com_github_grpc_grpc/src/core/lib/iomgr/tcp_server_utils_posix_common.cc","file_line":215,"referenced_errors":[{"created":"@1657116812.529627055","description":"Address already in use","errno":98,"file":"external/com_github_grpc_grpc/src/core/lib/iomgr/tcp_server_utils_posix_common.cc","file_line":189,"os_error":"Address already in use","syscall":"bind"}]}]}]}
+2022-07-06 16:13:33.305137: I tensorflow_serving/core/basic_manager.cc:279] Unload all remaining servables in the manager.
+2022-07-06 16:13:33.305169: I tensorflow_serving/core/loader_harness.cc:152] Quiescing servable version {name: fashion_model version: 1}
+2022-07-06 16:13:33.305176: I tensorflow_serving/core/loader_harness.cc:159] Done quiescing servable version {name: fashion_model version: 1}
+2022-07-06 16:13:33.305180: I tensorflow_serving/core/loader_harness.cc:119] Unloading just-loaded servable version {name: fashion_model version: 1}
+2022-07-06 16:13:33.306058: I ./tensorflow_serving/core/simple_loader.h:371] Calling MallocExtension_ReleaseToSystem() after servable unload with 300097
+2022-07-06 16:13:33.306069: I tensorflow_serving/core/loader_harness.cc:127] Done unloading servable version {name: fashion_model version: 1}
+Failed to start server. Error: INVALID_ARGUMENT: Failed to BuildAndStart gRPC server
